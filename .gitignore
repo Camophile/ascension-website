@@ -1,0 +1,15 @@
+node_modules/
+
+.env
+
+*.log
+*.sqlite3
+
+public/dist/
+public/img/
+public/lib/
+*.swp
+
+# OS metadata
+.DS_Store
+Thumbs.db

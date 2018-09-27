@@ -1,0 +1,20 @@
+{
+  "name": "handlebars-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "handlebars": "^4.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "handlebars": "./node_modules/.bin/handlebars ./views/layouts -f ./js/compiled.hbs.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
