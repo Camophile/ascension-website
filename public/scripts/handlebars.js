@@ -23,14 +23,20 @@ jQuery(document).ready(function( $ ) {
       // .done(function(headerPartial) {
         // $("body").append(headerPartial);
         // Handlebars.registerPartial('header', $('#header-partial').html());
-        var homeTemplate = Handlebars.templates.main({title: 'Ascension'});
-        var aboutTemplate = Handlebars.templates.about({title: 'About Us'});
+
+        // Load pseudo-templates as templates before site templates
         var headerTemplate = Handlebars.templates.header();
         var footerTemplate = Handlebars.templates.footer();
+
+        // Turns above templates into partials
         Handlebars.partials = Handlebars.templates;
+
+        // precompile all templates
+        var homeTemplate = Handlebars.templates.main({title: 'Ascension'});
+        var aboutTemplate = Handlebars.templates.about({title: 'About Us'});
+
+        // target DOM node to fill page template 
         $('#home').html(homeTemplate);
-        $('#header').html(headerTemplate);
-        $('#footer').html(footerTemplate);
       // })
 
   //$('#about-page').html(aboutTemplate);
