@@ -35,8 +35,9 @@ jQuery(document).ready(function( $ ) {
         var homeTemplate = Handlebars.templates.main({title: 'Ascension'});
         var aboutTemplate = Handlebars.templates.about({title: 'About Us'});
 
-        // target DOM node to fill page template 
+        // target DOM node to fill page template
         $('#home').html(homeTemplate);
+        $('#about-page').html(aboutTemplate);
       // })
 
   //$('#about-page').html(aboutTemplate);
