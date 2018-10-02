@@ -9,38 +9,48 @@ Handlebars.registerHelper('blockHelper', function(options) {
                           // appears in opening and closing block
 }); */
 
-/* // Partials
-Handlebars.registerPartial('header',
-  $('#header-partial').html());
 
-  */
+  function createHandlebarsTemplates(templatesObj) {
+    const returnObj = {};
+    for (const template in templatesObj) {
+      returnObj[template] = Handlebars.templates[template](templatesObj[template]);
+    }
+    return returnObj;
+  }
 
 // Compile the template data into a function
 jQuery(document).ready(function( $ ) {
   try {
 
-    // $.ajax('../../views/partials/header.html')
-      // .done(function(headerPartial) {
-        // $("body").append(headerPartial);
-        // Handlebars.registerPartial('header', $('#header-partial').html());
-
-        // Load pseudo-templates as templates before site templates
-        var headerTemplate = Handlebars.templates.header();
-        var footerTemplate = Handlebars.templates.footer();
+        // Load pseudo-templates as templates before using them in pages below
+        createHandlebarsTemplates({
+          header: {},
+          footer: {},
+          carousel: {},     
+          banner: {}
+        });
 
         // Turns above templates into partials
         Handlebars.partials = Handlebars.templates;
 
-        // precompile all templates
-        var homeTemplate = Handlebars.templates.main({title: 'Ascension'});
-        var aboutTemplate = Handlebars.templates.about({title: 'About Us'});
+        const templatesObj = createHandlebarsTemplates({ // must be JSON
+          about: {
+            "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
+            "title": "Ascension | About Us"
+          },
+          home: { "title": "Ascension"},
+          team: {
+            "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
+            "title": "Ascension | Team"
+          }
+        });
 
         // target DOM node to fill page template
-        $('#home').html(homeTemplate);
-        $('#about-page').html(aboutTemplate);
+        $('#home').html(templatesObj.home);
+        $('#about-page').html(templatesObj.about);
+        $('#team-page').html(templatesObj.team);
       // })
 
-  //$('#about-page').html(aboutTemplate);
   } catch (e) {
     console.error(e.stack);
   }
