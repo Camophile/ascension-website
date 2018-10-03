@@ -1458,6 +1458,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #ddd;
 }
 
+/* Arman edits - 01/10/2018 */
+
+/*body:not(#home) #header {
+  background: rgba(0, 0, 0, 0.9);
+}*/
+
+#intro.banner {
+  height: 50vh;
+}
+
+#intro.banner .carousel-item {
+  height: 50vh;
+}
+
 /* Arman edits - 12/09/2018 */
 
 #header {
@@ -1517,13 +1531,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   #header #logo img {
     max-inline-size: 80%;
   }
-}
-
-
-@media (max-width: 1024px) {
-  /*#header#logo img {
-    width: 13%;
-  } */
 }
 
 @media (max-width: 768px) {

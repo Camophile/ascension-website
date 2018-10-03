@@ -1,12 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
+const publicDir = `${__dirname}/public`;
 
 /* if babel transciber doesn't work try below:
   main: ['babel-polyfill',
         './site/js/main.js'],
 */
 const entryPoint = {
-  main: './public/scripts/main.js'
+  main: `${publicDir}/scripts/main.js`,
+  handlebars: `${publicDir}/scripts/handlebars.js`
 };
 
 module.exports = {
