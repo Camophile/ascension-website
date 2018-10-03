@@ -10,7 +10,7 @@ Handlebars.registerHelper('blockHelper', function(options) {
 }); */
 
 
-  function createHandlebarsTemplates(templatesObj) {
+  function callHandlebarsTemplates(templatesObj) {
     const returnObj = {};
     for (const template in templatesObj) {
       returnObj[template] = Handlebars.templates[template](templatesObj[template]);
@@ -18,40 +18,57 @@ Handlebars.registerHelper('blockHelper', function(options) {
     return returnObj;
   }
 
-// Compile the template data into a function
 jQuery(document).ready(function( $ ) {
   try {
 
-        // Load pseudo-templates as templates before using them in pages below
-        createHandlebarsTemplates({
-          header: {},
-          footer: {},
-          carousel: {},     
-          banner: {}
-        });
-
-        // Turns above templates into partials
-        Handlebars.partials = Handlebars.templates;
-
-        const templatesObj = createHandlebarsTemplates({ // must be JSON
-          about: {
-            "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
-            "title": "Ascension | About Us"
+    // // load partials object from Handlebars Templates
+    Handlebars.partials = callHandlebarsTemplates({
+      header: {},
+      footer: {},
+      banner: {},
+      carousel: {
+        "slide": [
+          {
+            "imgUrl": "public/img/intro-carousel/Vancouver_banner_2.jpg",
+            "headText": "We are professional",
+            "paragText": "Give us your money",
+            "class": "carousel-item active",
           },
-          home: { "title": "Ascension"},
-          team: {
-            "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
-            "title": "Ascension | Team"
+          {
+            "imgUrl": "public/img/intro-carousel/Toronto_banner_2.jpg",
+            "headText": "We are cool",
+            "paragText": "Give us your time",
+            "class": "carousel-item"
+          },
+          {
+            "imgUrl": "public/img/intro-carousel/Berlin_banner.jpg",
+            "headText": "We are stylin'",
+            "paragText": "Give us your daughters",
+            "class": "carousel-item"
           }
-        });
+        ]
+      }
+    });
 
-        // target DOM node to fill page template
-        $('#home').html(templatesObj.home);
-        $('#about-page').html(templatesObj.about);
-        $('#team-page').html(templatesObj.team);
-      // })
+    //Load views templates
+    const templatesObj = callHandlebarsTemplates({
+      about: {
+        "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
+        "title": "Ascension | About Us"
+      },
+      home: { "title": "Ascension"},
+      team: {
+        "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
+        "title": "Ascension | Team"
+      }
+    });
+
+    // target DOM node to fill page template
+    $('#home').html(templatesObj.home);
+    $('#about-page').html(templatesObj.about);
+    $('#team-page').html(templatesObj.team);
 
   } catch (e) {
-    console.error(e.stack);
+    console.error(e.message, '\n', e.stack);
   }
 });

@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "bundle": "./node_modules/.bin/handlebars ./views/layouts ./views/layouts/partials -f ./public/dist/compiled.hbs.js && webpack",
+    "bundle": "./node_modules/.bin/handlebars ./views/layouts ./views/partials -f ./public/dist/templates.hbs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
