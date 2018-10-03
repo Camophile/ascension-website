@@ -838,7 +838,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 48px;
-  display: block;
+  /*display: block;*/
   color: #c62f1f;
 }
 

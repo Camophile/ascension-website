@@ -15,14 +15,15 @@ Handlebars.registerHelper('blockHelper', function(options) {
     for (const template in templatesObj) {
       returnObj[template] = Handlebars.templates[template](templatesObj[template]);
     }
+    // console.log('returnObj', returnObj);
     return returnObj;
   }
 
 jQuery(document).ready(function( $ ) {
   try {
 
-    // // load partials object from Handlebars Templates
-    Handlebars.partials = callHandlebarsTemplates({
+    // load partials object from Handlebars Templates
+    Handlebars.registerPartial(callHandlebarsTemplates({
       header: {},
       footer: {},
       banner: {},
@@ -30,25 +31,30 @@ jQuery(document).ready(function( $ ) {
         "slide": [
           {
             "imgUrl": "public/img/intro-carousel/Vancouver_banner_2.jpg",
-            "headText": "We are professional",
-            "paragText": "Ascension works with managers...",
-            "btnText": "Work with us"
+            "headText": "Ascension is Expertise",
+            "paragText": "Join a network of thousands of accredited investors that have achieved their financial and lifestyle goals with Ascension Millionaires Club",
+            "btnText": "Learn more"
           },
           {
             "imgUrl": "public/img/intro-carousel/Toronto_banner_2.jpg",
-            "headText": "We are stylin'",
-            "paragText": "Give us your time",
-            "btnText": "Ride with us"
+            "headText": "Ascension is Trust",
+            "paragText": "See how we have changed the lives of our investors and learn how we can do it for you",
+            "btnText": "Learn more"
           },
           {
             "imgUrl": "public/img/intro-carousel/Berlin_banner.jpg",
-            "headText": "We are Ascension",
-            "paragText": "Your portal between setting your goals and achieving them",
-            "btnText": "Rise with us"
-          }
+            "headText": "Ascension is Us",
+            "paragText": "We are a group of dedicated entrepreneurs and financial insiders have the connections and experience to take your portfolio to the next level",
+            "btnText": "Get started"
+          },
         ]
-      }
-    });
+      },
+      cta: {},
+    }));
+    // console.log('Handlebars partials before', Handlebars.partials);
+    Handlebars.partials = Handlebars.templates;
+    // console.log('Handlebars partials after', Handlebars.partials);
+
 
     //Load views templates
     const templatesObj = callHandlebarsTemplates({
@@ -56,7 +62,15 @@ jQuery(document).ready(function( $ ) {
         "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
         "title": "Ascension | About Us"
       },
-      home: { "title": "Ascension"},
+      home: {
+        "title": "Ascension",
+        "cta": {
+          "header": "Ascend!",
+          "text": "Ready to take your portfolio to the next level?",
+          "btn": "Join The Club!",
+          "link": "/contact.html"
+        }
+      },
       team: {
         "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
         "title": "Ascension | Team"
