@@ -31,20 +31,20 @@ jQuery(document).ready(function( $ ) {
           {
             "imgUrl": "public/img/intro-carousel/Vancouver_banner_2.jpg",
             "headText": "We are professional",
-            "paragText": "Give us your money",
-            "class": "carousel-item active",
+            "paragText": "Ascension works with managers...",
+            "btnText": "Work with us"
           },
           {
             "imgUrl": "public/img/intro-carousel/Toronto_banner_2.jpg",
-            "headText": "We are cool",
+            "headText": "We are stylin'",
             "paragText": "Give us your time",
-            "class": "carousel-item"
+            "btnText": "Ride with us"
           },
           {
             "imgUrl": "public/img/intro-carousel/Berlin_banner.jpg",
-            "headText": "We are stylin'",
-            "paragText": "Give us your daughters",
-            "class": "carousel-item"
+            "headText": "We are Ascension",
+            "paragText": "Your portal between setting your goals and achieving them",
+            "btnText": "Rise with us"
           }
         ]
       }
