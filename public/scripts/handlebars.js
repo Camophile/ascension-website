@@ -15,7 +15,6 @@ Handlebars.registerHelper('blockHelper', function(options) {
     for (const template in templatesObj) {
       returnObj[template] = Handlebars.templates[template](templatesObj[template]);
     }
-    // console.log('returnObj', returnObj);
     return returnObj;
   }
 
@@ -23,7 +22,7 @@ jQuery(document).ready(function( $ ) {
   try {
 
     // load partials object from Handlebars Templates
-    Handlebars.registerPartial(callHandlebarsTemplates({
+    const partialsObj = callHandlebarsTemplates({
       header: {},
       footer: {},
       banner: {},
@@ -37,7 +36,7 @@ jQuery(document).ready(function( $ ) {
           },
           {
             "imgUrl": "public/img/intro-carousel/Toronto_banner_2.jpg",
-            "headText": "Ascension is Trust",
+            "headText": "Ascension is Lifestyle",
             "paragText": "See how we have changed the lives of our investors and learn how we can do it for you",
             "btnText": "Learn more"
           },
@@ -50,13 +49,15 @@ jQuery(document).ready(function( $ ) {
         ]
       },
       cta: {},
-    }));
-    // console.log('Handlebars partials before', Handlebars.partials);
+      services: {}
+    });
+
+    // figure out why this is working and learn to optimize
+    // (https://handlebarsjs.com/precompilation.html)
     Handlebars.partials = Handlebars.templates;
-    // console.log('Handlebars partials after', Handlebars.partials);
+    Handlebars.registerPartial('carousel', partialsObj.carousel); // carousel auto-slide jQuery still not functional
 
-
-    //Load views templates
+    // Load views templates
     const templatesObj = callHandlebarsTemplates({
       about: {
         "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",

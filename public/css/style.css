@@ -1458,7 +1458,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #ddd;
 }
 
-/* Arman edits - 01/10/2018 */
+/*
+** Arman edits
+*/
+
+/* 04/10/2018 */
+
+#services {
+  background: #f7f7f7;
+}
+
+/* 01/10/2018 */
 
 /*body:not(#home) #header {
   background: rgba(0, 0, 0, 0.9);
