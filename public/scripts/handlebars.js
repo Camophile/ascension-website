@@ -30,20 +30,20 @@ jQuery(document).ready(function( $ ) {
         "slide": [
           {
             "imgUrl": "public/img/intro-carousel/Vancouver_banner_2.jpg",
-            "headText": "Ascension is Expertise",
-            "paragText": "Join a network of thousands of accredited investors that have achieved their financial and lifestyle goals with Ascension Millionaires Club",
+            "headText": "Ascension is Trust",
+            "paragText": "Ascension is your golden key to financial independence",
             "btnText": "Learn more"
           },
           {
             "imgUrl": "public/img/intro-carousel/Toronto_banner_2.jpg",
             "headText": "Ascension is Lifestyle",
-            "paragText": "See how we have changed the lives of our investors and learn how we can do it for you",
+            "paragText": "Your seven-digit self starts here",
             "btnText": "Learn more"
           },
           {
             "imgUrl": "public/img/intro-carousel/Berlin_banner.jpg",
-            "headText": "Ascension is Us",
-            "paragText": "We are a group of dedicated entrepreneurs and financial insiders have the connections and experience to take your portfolio to the next level",
+            "headText": "Ascension is Relationships",
+            "paragText": "With <em>Us</em> you don’t just join an insider club, you become part of an extended family of investors and business executives",
             "btnText": "Get started"
           },
         ]

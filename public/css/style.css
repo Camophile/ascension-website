@@ -1468,6 +1468,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #f7f7f7;
 }
 
+#services h4 {
+  color: #111
+}
+
+#services h4:hover {
+  cursor: default;
+  color: #c62f1f;
+  outline: none;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
 /* 01/10/2018 */
 
 /*body:not(#home) #header {
