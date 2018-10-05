@@ -29,21 +29,21 @@ jQuery(document).ready(function( $ ) {
       carousel: {
         "slide": [
           {
-            "imgUrl": "public/img/intro-carousel/Vancouver_banner_2.jpg",
-            "headText": "Ascension is Trust",
-            "paragText": "Ascension is your golden key to financial independence",
+            "imgUrl": "public/img/intro-carousel/airplane_landing.jpg",
+            "headText": "<em>is Trust</em>",
+            "paragText": "We've empowered 100's of investors attain their financial goals",
             "btnText": "Learn more"
           },
           {
-            "imgUrl": "public/img/intro-carousel/Toronto_banner_2.jpg",
-            "headText": "Ascension is Lifestyle",
+            "imgUrl": "public/img/intro-carousel/sunset_rooftop_banner.jpg",
+            "headText": "<em>is Lifestyle</em>",
             "paragText": "Your seven-digit self starts here",
             "btnText": "Learn more"
           },
           {
-            "imgUrl": "public/img/intro-carousel/Berlin_banner.jpg",
-            "headText": "Ascension is Relationships",
-            "paragText": "With <em>Us</em> you don’t just join an insider club, you become part of an extended family of investors and business executives",
+            "imgUrl": "public/img/intro-carousel/Vancouver_banner_3.jpg",
+            "headText": "<em>is Us</em>",
+            "paragText": "Become part of a global family of investors and business executives",
             "btnText": "Get started"
           },
         ]
@@ -60,20 +60,20 @@ jQuery(document).ready(function( $ ) {
     // Load views templates
     const templatesObj = callHandlebarsTemplates({
       about: {
-        "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
+        "imgUrl": "public/img/intro-carousel/Vancouver_banner_3.jpg",
         "title": "Ascension | About Us"
       },
       home: {
         "title": "Ascension",
         "cta": {
-          "header": "Ascend!",
+          "header": "Join Ascension Millionaires Club!",
           "text": "Ready to take your portfolio to the next level?",
-          "btn": "Join The Club!",
+          "btn": "Join Now",
           "link": "/contact.html"
         }
       },
       team: {
-        "imgUrl": "public/img/section-banner/Vancouver_banner_2.jpg",
+        "imgUrl": "public/img/intro-carousel/Vancouver_banner_3.jpg",
         "title": "Ascension | Team"
       }
     });

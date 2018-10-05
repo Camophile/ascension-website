@@ -1294,7 +1294,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #13a456;
+  background: #a22012;
 }
 
 /*--------------------------------------------------------------
@@ -1462,39 +1462,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 ** Arman edits
 */
 
-/* 04/10/2018 */
-
-#services {
-  background: #f7f7f7;
-}
-
-#services h4 {
-  color: #111
-}
-
-#services h4:hover {
-  cursor: default;
-  color: #c62f1f;
-  outline: none;
-  text-decoration: none;
-  transition: 0.5s;
-}
-
-/* 01/10/2018 */
-
-/*body:not(#home) #header {
-  background: rgba(0, 0, 0, 0.9);
-}*/
-
-#intro.banner {
-  height: 50vh;
-}
-
-#intro.banner .carousel-item {
-  height: 50vh;
-}
-
-/* Arman edits - 12/09/2018 */
+/* 12/09/2018 */
 
 #header {
   padding: 17px 0;
@@ -1505,6 +1473,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #header #logo img {
+  max-width: 50%;
   max-inline-size: 50%;
   transition: all 0.5s;
 }
@@ -1529,6 +1498,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #header.header-scrolled #logo img {
+  max-width: 38%;
   max-inline-size: 74px;
   transition: all 0.5s;
 }
@@ -1576,4 +1546,98 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about {
   color: green;
+}
+
+/* 01/10/2018 */
+
+/*body:not(#home) #header {
+  background: rgba(0, 0, 0, 0.9);
+}*/
+
+#intro.banner {
+  height: 50vh;
+}
+
+#intro.banner .carousel-item {
+  height: 50vh;
+}
+
+/* 04/10/2018 */
+
+#intro h2 {
+  margin-bottom: 20px;
+}
+
+#intro h3 {
+  color: #fff;
+  font-size: 33px;
+  margin-bottom: 20px;
+}
+
+#facts {
+  padding: 60px 0 40px 0;
+}
+
+#facts .text-center {
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+
+#services {
+  background: #f7f7f7;
+}
+
+#services h4 {
+  color: #111
+}
+
+#services h4:hover {
+  cursor: default;
+  color: #c62f1f;
+  outline: none;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+#footer .footer-top .footer-contact .contact-details a {
+  color: #eee;
+}
+
+#footer .footer-top .footer-contact .contact-details a:hover {
+  color: #c62f1f;
+}
+
+@media (min-width: 1024px) {
+  #intro p {
+    width: 100%;
+  }
+}
+
+/* 04/10/2018 */
+
+/*#services ul {
+  list-style: none;
+}*/
+
+#footer .footer-contact .contact-details i {
+  font-size: 29px;
+}
+
+#footer .footer-contact .contact-details a  {
+  vertical-align: top;
+}
+
+#footer .footer-contact .contact-details p {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1200px) {
+  #footer .footer-contact .contact-details i {
+    font-size: 20px;
+  }
+
+  #footer .footer-contact .contact-details a  {
+    font-size: 12px;
+  }
 }
