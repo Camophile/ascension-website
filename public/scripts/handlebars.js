@@ -49,7 +49,8 @@ jQuery(document).ready(function( $ ) {
         ]
       },
       cta: {},
-      services: {}
+      services: {},
+      facts: {}
     });
 
     // figure out why this is working and learn to optimize
