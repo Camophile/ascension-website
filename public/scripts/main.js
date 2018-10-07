@@ -12,10 +12,10 @@ jQuery(document).ready(function( $ ) {
 
   var headerLogo = $('#header #logo .scrollto img');
   headerLogo.mouseenter(function(){
-      $('#header #logo .scrollto img').attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_RED.png');
+      headerLogo.attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_RED.png');
   });
   headerLogo.mouseleave(function(){
-    $('#header #logo .scrollto img').attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_BLACK.png');
+    headerLogo.attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_BLACK.png');
   });
 
   // Select menu item to highlight according to path
