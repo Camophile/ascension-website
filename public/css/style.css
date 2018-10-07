@@ -743,7 +743,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Call To Action Section
 --------------------------------*/
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg_red.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
 }
@@ -1465,12 +1465,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* 12/09/2018 */
 
 #header {
-  padding: 17px 0;
+  padding: 2px 0;
 }
 
-#header #logo {
+/*#header #logo {
   margin-top: -5px;
-}
+}*/
 
 #header #logo img {
   max-width: 50%;
@@ -1478,8 +1478,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.5s;
 }
 
+#header #logo img {
+
+}
+
 #nav-menu-container {
-  padding: 18px 60px 24px 0;
+  padding: 32px 60px 24px 0;
   transition: all 0.5s;
 }
 
@@ -1615,6 +1619,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* 04/10/2018 */
+
+#header {
+  border-bottom: 1px solid #fff;
+}
+
+#header #logo {
+  transition: 0.5s;
+}
+
+/*#header.header-scrolled {
+  border-bottom: 0.5px solid #fff;
+}*/
 
 /*#services ul {
   list-style: none;
