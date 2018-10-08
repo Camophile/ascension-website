@@ -62,13 +62,15 @@ jQuery(document).ready(function( $ ) {
       },
       cta: {},
       services: {},
-      facts: {}
+      facts: {},
+      contact: {},
+      clients: {},
     });
 
     // figure out why this is working and learn to optimize
     // (https://handlebarsjs.com/precompilation.html)
     Handlebars.partials = Handlebars.templates;
-    Handlebars.registerPartial('carousel', partialsObj.carousel); // carousel auto-slide jQuery still not functional
+    Handlebars.registerPartial('carousel', partialsObj.carousel); // figure out to precompile so can use the lighter runtime scrip (https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.runtime.min.js)
 
     // Load views templates
     const templatesObj = callHandlebarsTemplates({
