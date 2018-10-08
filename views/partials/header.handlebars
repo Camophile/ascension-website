@@ -5,12 +5,20 @@
   <div class="container-fluid">
 
     <div id="logo" class="pull-left col-md-2">
+      {{#if anchor}}
+      <a href="{{anchor}}" class="scrollto"><img src="public/img/ASCENSION-BULL-LOGO_2018_BLACK.png" alt="" title="" /></a>
+      {{else}}
       <a href="/no-view-mode" class="scrollto"><img src="public/img/ASCENSION-BULL-LOGO_2018_BLACK.png" alt="" title="" /></a>
+      {{/if}}
     </div>
 
     <nav id="nav-menu-container" class="col-md-10">
       <ul class="nav-menu">
+        {{#if anchor}}
+        <li class="menu-active"><a href="{{anchor}}">Home</a></li>
+        {{else}}
         <li class="menu-active"><a href="/no-view-mode">Home</a></li>
+        {{/if}}
         <li class="menu-has-children"><a href="/no-view-mode/about.html">About Us</a>
           <ul>
             <li><a href="/no-view-mode/team.html">Meet the team</a></li>

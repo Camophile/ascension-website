@@ -85,7 +85,8 @@ jQuery(document).ready(function( $ ) {
           "text": "Ready to take your portfolio to the next level?",
           "btn": "Join Now",
           "link": "/contact.html"
-        }
+        },
+        "anchor": "#intro"
       },
       team: {
         "imgUrl": "public/img/intro-carousel/Vancouver_banner_3.jpg",
