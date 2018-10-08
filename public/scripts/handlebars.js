@@ -29,20 +29,32 @@ jQuery(document).ready(function( $ ) {
       carousel: {
         "slide": [
           {
-            "imgUrl": "public/img/intro-carousel/airplane_landing.jpg",
-            "headText": "<em>is Trust</em>",
-            "paragText": "We've empowered 100's of investors attain their financial goals",
-            "btnText": "Learn more"
-          },
-          {
             "imgUrl": "public/img/intro-carousel/sunset_rooftop_banner.jpg",
-            "headText": "<em>is Lifestyle</em>",
+            "headText": "is Lifestyle",
             "paragText": "Your seven-digit self starts here",
             "btnText": "Learn more"
           },
           {
+            "imgUrl": "public/img/intro-carousel/Experience_banner.jpg",
+            "headText": "is Experience",
+            "paragText": "With over 20 years in the industry, our network of entrepreneurs and business professionals consistently delivers superior returns to investors",
+            "btnText": "Get started"
+          },
+          {
+            "imgUrl": "public/img/intro-carousel/airplane_landing.jpg",
+            "headText": "is Trust",
+            "paragText": "We've empowered 100's of investors attain their financial goals",
+            "btnText": "Learn more"
+          },
+          {
+            "imgUrl": "public/img/intro-carousel/Mazunte_banner.jpg",
+            "headText": "is Exclusive",
+            "paragText": "Members get access to early-stage financings not available through traditional platforms",
+            "btnText": "Get started"
+          },
+          {
             "imgUrl": "public/img/intro-carousel/Vancouver_banner_3.jpg",
-            "headText": "<em>is Us</em>",
+            "headText": "is Us",
             "paragText": "Become part of a global family of investors and business executives",
             "btnText": "Get started"
           },

@@ -10,13 +10,13 @@ jQuery(document).ready(function( $ ) {
   //   $('#header #logo .scrollto img').attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_BLACK.png');
   // });
 
-  var headerLogo = $('#header #logo .scrollto img');
-  headerLogo.mouseenter(function(){
-      headerLogo.attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_RED.png');
-  });
-  headerLogo.mouseleave(function(){
-    headerLogo.attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_BLACK.png');
-  });
+  // var headerLogo = $('#header #logo .scrollto img');
+  // headerLogo.mouseenter(function(){
+  //     headerLogo.attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_RED.png');
+  // });
+  // headerLogo.mouseleave(function(){
+  //   headerLogo.attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_BLACK.png');
+  // });
 
   // Select menu item to highlight according to path
   var path = window.location.pathname;
@@ -126,8 +126,10 @@ jQuery(document).ready(function( $ ) {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#header').addClass('header-scrolled');
+      // $('#header #logo .scrollto img').attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_BLACK.png');
     } else {
       $('#header').removeClass('header-scrolled');
+      // $('#header #logo .scrollto img').attr("src", '/public/img/ASCENSION-BULL-LOGO_2018_RED.png');
     }
   });
 
